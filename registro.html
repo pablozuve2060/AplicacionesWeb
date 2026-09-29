@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de datos</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+
+    <div class="registro">
+        <h1>Registro de Cliente</h1>
+
+        <form onsubmit="registrar(); return false;">
+            
+        <label for="Cedula">Cédula: (Máximo 10 dígitos)</label>
+        <input type="text" id="Cedula" name="Cedula" maxlength="10" required>
+
+        <label for="nombre">Nombre: (Máximo 30 caracteres)</label>
+        <input type="text" id="nombre" name="nombre" maxlength="30" required>
+
+        <label for="direccion">Dirección: (Máximo 50 caracteres)</label>
+        <input type="text" id="direccion" name="direccion" maxlength="50" required>
+
+        <label for="telefono">Teléfono Celular: (Máximo 10 dígitos)</label>
+        <input type="text" id="telefono" name="telefono" maxlength="10" required>
+
+        <label for="correo">Correo Electrónico: </label>
+        <input type="email" id="correo" name="correo" required>
+
+        <button type="submit"><b>Guardar</b></button>
+
+        </form>
+        
+    </div>
+    
+    <script>
+    function registrar() {
+        let cedula = document.getElementById("Cedula").value.trim();
+        let nombre = document.getElementById("nombre").value.trim();
+        let direccion = document.getElementById("direccion").value.trim();
+        let telefono = document.getElementById("telefono").value.trim();
+        let correo = document.getElementById("correo").value.trim();
+
+        if (cedula === "" || nombre === "" || direccion === "" || telefono === "" || correo === "") {
+            alert("Llene todos los campos para el registro...");
+            return;
+        }
+
+        if (!cedula.match(/^\d+$/)) {
+            alert("La cédula debe contener solo números validos...");
+            return;
+        }
+
+        if (!telefono.match(/^\d+$/)) {
+            alert("El teléfono debe contener solo números validos...");
+            return;
+        }
+        if (cedula.length < 10) {
+            alert("La cédula debe tener 10 dígitos...")
+            return;
+        }
+        if (telefono.length < 10) {
+            alert("El teléfono debe tener 10 dígitos...")
+            return;
+        }
+        if (!correo.includes("@") || !correo.includes(".")) {
+            alert("Ingrese un correo electrónico válido...");
+            return;
+        }
+        if (!nombre.match(/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/)) {
+            alert("El nombre solo debe contener letras ...");
+            return;
+        }
+        alert("Registro exitoso...")
+    }
+    </script>
+
+</body>
+</html>
