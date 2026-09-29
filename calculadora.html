@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+
+<body>
+    <div class="calculadora" >
+        <h1>Calculadora</h1>
+
+        <label for="PrimerValor">Primer valor: </label>
+        <input type="number" id="PrimerValor" placeholder="Ingrese el primer valor..." name="PrimerValor">
+
+        <label for="SegundoValor">Segundo valor: </label>
+        <input type="number" id="SegundoValor" placeholder="Ingrese el segundo valor..." name="SegundoValor">
+
+        <h4>Se calculara la suma, resta, multiplicación, división y módulo</h4>
+
+        <button onclick="Calcular();"><b>Calcular</b></button>
+
+    </div>
+
+    <script>
+    function Calcular() {
+        let primerValor = parseFloat(document.getElementById("PrimerValor").value);
+        let segundoValor = parseFloat(document.getElementById("SegundoValor").value);
+        
+           if ((isNaN(primerValor)) || (isNaN(segundoValor))) {
+            alert("Por favor, ingrese valores numéricos válidos.");
+        }  else {     
+           for (let i = 0; i < 5; i++) {    
+            if (i == 0) {
+                let suma = primerValor + segundoValor;
+                alert("La suma es: " + suma);
+            }
+            if (i == 1) {
+                let resta = primerValor - segundoValor;
+                alert("La resta es: " + resta);
+            }
+            if (i == 2) {
+                let multiplicacion = primerValor * segundoValor;
+                alert("La multiplicación es: " + multiplicacion);
+            }
+            if (i == 3) {
+                if (segundoValor === 0) {
+                    alert("No se puede dividir entre cero.");
+                } else {
+                    let division = primerValor / segundoValor;
+                    alert("La división es: " + division);
+                }
+            }
+            if (i == 4) {
+                if (segundoValor === 0) {
+                    alert("No se puede calcular el módulo entre cero.");
+                } else {
+                    let MOD = (primerValor % segundoValor);
+                    alert("El módulo es: " + MOD);
+            }
+            }
+        }
+    }
+    }
+    </script>
+</body>
+</html>
