@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/validaciones.css">
+
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="sistema">
+            <span class="sistema-nombre">Historias Clínicas</span>
+            <span class="sistema-sub">Policlínico ULEAM</span>
+        </div>
+    </header>
+
+    <div class="login">
+        <h1>Login</h1>
+        <img src="logo.png" alt="Logo" class="logo">
+
+        <h3>Ingrese su usuario y contraseña</h3>
+
+        <form id="form-login" novalidate>
+
+            <label for="usuario"></label>
+            <input type="text" id="usuario" name="usuario" maxlength="50" required placeholder="👤Usuario">
+
+            <label for="contrasena"></label>
+            <input type="password" id="contrasena" name="contrasena" maxlength="50" required placeholder="🔑Contraseña">
+
+            <button type="submit"><b>Ingresar</b></button>
+
+        </form>
+        <script src="java/datosprueba.js"></script>
+        <script src="java/validaciones.js"></script>
+
+    </div>
+</body>

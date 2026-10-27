@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Pacientes</title>
+    <link rel="stylesheet" href="css/busqueda.css">
+    <link rel="stylesheet" href="css/validaciones.css">
+    <link rel="stylesheet" href="css/pantallas.css">
+
+</head>
+
+
+<body>
+    <header class="cabecera">
+        <div class="sistema">
+            <span class="sistema-nombre">Historias Clínicas</span>
+            <span class="sistema-sub">Policlínico ULEAM</span>
+        </div>
+    </header>
+
+    <div class="busqueda">
+        <h1>Búsqueda de Pacientes</h1>
+        <h3>Ingrese el nombre o la cédula del paciente</h3>
+
+        <form id="form-busqueda" novalidate>
+
+            <label for="busqueda"></label>
+            <input type="text" id="busqueda" name="busqueda" maxlength="50" required
+                placeholder="🔍Ingrese un nombre o una cédula">
+
+            <button class="button1" type="submit"><b>Buscar</b></button>
+
+            <button class="button2" type="button" onclick="location.href='menuM.html'"><b>Volver</b></button>
+
+        </form>
+
+        <script src="java/datosprueba.js"></script>
+        <script src="java/validaciones.js"></script>
+        <script src="java/pantallas.js"></script>
+
+    </div>
+</body>

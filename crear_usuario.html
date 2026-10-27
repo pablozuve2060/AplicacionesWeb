@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Usuario</title>
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/validaciones.css">
+
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="sistema">
+            <span class="sistema-nombre">Historias Clínicas</span>
+            <span class="sistema-sub">Policlínico ULEAM</span>
+        </div>
+    </header>
+
+    <div class="nuevo">
+        <h1>Nuevo usuario</h1>
+        <h2>Ingrese los datos del nuevo usuario</h2>
+
+        <form id="form-usuario" novalidate>
+
+            <label for="usuario"></label>
+            <input type="text" id="usuario" name="usuario" maxlength="50" required placeholder="👤Nombre de usuario">
+
+            <label for="contrasena"></label>
+            <input type="password" id="contrasena" name="contrasena" maxlength="50" required placeholder="🔑Contraseña">
+
+            <label for="rol"></label>
+            <select id="rol" name="rol" required>
+                <option value="" disabled selected>⚙️Seleccione un rol</option>
+                <option value="medico">Médico</option>
+                <option value="recepcion">Recepción</option>
+
+            </select>
+
+            <button class="button1" type="submit"><b>Crear Usuario</b></button>
+
+            <button class="button2" type="button" onclick="location.href='gestionU.html'"><b>Volver</b></button>
+
+        </form>
+        
+        <script src="java/validaciones.js"></script>
+
+    </div>
+</body>

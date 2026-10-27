@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva consulta</title>
+    <link rel="stylesheet" href="css/consulta.css">
+    <link rel="stylesheet" href="css/validaciones.css">
+
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="sistema">
+            <span class="sistema-nombre">Historias Clínicas</span>
+            <span class="sistema-sub">Policlínico ULEAM</span>
+        </div>
+    </header>
+
+    <div class="registro">
+        <h1>Nueva entrada</h1>
+
+        <form id="form-entrada" novalidate>
+
+            <label for="motivo"></label>
+            <textarea id="motivo" name="motivo" maxlength="100" required placeholder="Motivo de la consulta"></textarea>
+
+            <label for="diagnostico"></label>
+            <textarea id="diagnostico" name="diagnostico" maxlength="100" required placeholder="Diagnóstico"></textarea>
+
+            <label for="tratamiento"></label>
+            <textarea id="tratamiento" name="tratamiento" maxlength="100" required placeholder="Tratamiento"></textarea>
+
+            <label for="observaciones"></label>
+            <textarea id="observaciones" name="observaciones" maxlength="500" required placeholder="Observaciones"></textarea>
+
+            <button class="button1" type="submit"><b>Registrar Consulta</b></button>
+
+            <button class="button2" type="button" onclick="irCon('historial.html')"><b>Volver</b></button>
+
+        </form>
+
+        <script src="java/validaciones.js"></script>
+        <script src="java/pantallas.js"></script>
+
+    </div>
+</body>

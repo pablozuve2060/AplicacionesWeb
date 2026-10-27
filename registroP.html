@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/validaciones.css">
+
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="sistema">
+            <span class="sistema-nombre">Historias Clínicas</span>
+            <span class="sistema-sub">Policlínico ULEAM</span>
+        </div>
+    </header>
+
+    <div class="registro">
+        <h1>Registro de Pacientes</h1>
+
+        <form id="form-paciente" novalidate>
+
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required placeholder="👤Nombre completo">
+
+            <label for="cedula"></label>
+            <input type="text" id="cedula" name="cedula" maxlength="10" required placeholder="🪪Cédula">
+
+            <label for="nacimiento"></label>
+            <input type="date" id="nacimiento" name="nacimiento">
+
+            <label for="telefono"></label>
+            <input type="text" id="telefono" name="telefono" maxlength="15" required placeholder="📞Teléfono">
+
+            <button class="button1" type="submit"><b>Registrar</b></button>
+
+            <button class="button2" type="button" onclick="location.href='menuR.html'"><b>Volver</b></button>
+
+        </form>
+
+        <script src="java/validaciones.js"></script>
+
+    </div>
+</body>

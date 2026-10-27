@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="css/tablas.css">
+
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="sistema">
+            <span class="sistema-nombre">Historias Clínicas</span>
+            <span class="sistema-sub">Policlínico ULEAM</span>
+        </div>
+    </header>
+
+    <div class="gestion">
+        <h1>Usuarios del sistema</h1>
+        <table>
+            <thead>
+
+                <tr>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>María Solórzano</td>
+                    <td>Médico</td>
+                    <td>Activo</td>
+                    <td><button type="button" class="suspender">Suspender</button></td>
+                </tr>
+
+                <tr>
+                    <td>Paúl Gonzalez</td>
+                    <td>Recepción</td>
+                    <td>Activo</td>
+                    <td><button type="button" class="suspender">Suspender</button></td>
+                </tr>
+
+                <tr>
+                    <td>Julián Valencia</td>
+                    <td>Recepción</td>
+                    <td>Suspendido</td>
+                    <td><button type="button" class="habilitar">Habilitar</button></td>
+                </tr>
+
+                <tr>
+                    <td>Carlos Luna</td>
+                    <td>Médico</td>
+                    <td>Activo</td>
+                    <td><button type="button" class="suspender">Suspender</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <button class="button1" type="button" onclick="location.href='crear_usuario.html'"><b>Nuevo Usuario</b></button>
+
+        <button class="button2" type="button" onclick="location.href='menuA.html'"><b>Volver</b></button>
+
+    </div>
+</body>
