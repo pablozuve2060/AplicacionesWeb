@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiante</title>
+    <link rel="stylesheet" href="registroE.css">
+</head>
+<body>
+    
+    <div class="registro">
+        <h1>Registro de Estudiante</h1>
+       
+        <form action="#" method="POST">
+
+            <div class="form-group">
+                <label for="Cedula">Cédula: (Máximo 10 dígitos)</label>
+                <input type="text" id="Cedula" name="Cedula" maxlength="10" required placeholder="Ingrese su cédula">
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Apellidos: (Máximo 30 caracteres)</label>
+                <input type="text" id="apellido" name="apellido" maxlength="30" required placeholder="Ingrese sus apellidos...">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombres: (Máximo 30 caracteres)</label>
+                <input type="text" id="nombre" name="nombre" maxlength="30" required placeholder="Ingrese sus nombres...">
+            </div>
+            
+            <div class="form-group">
+                <label for="direccion">Dirección: (Máximo 50 caracteres)</label>
+                <input type="text" id="direccion" name="direccion" maxlength="50" required placeholder="Ingrese su dirección...">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono Celular: (Máximo 10 dígitos)</label>
+                <input type="text" id="telefono" name="telefono" maxlength="10" required placeholder="Ingrese su teléfono...">
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Electrónico: </label>
+                <input type="email" id="correo" name="correo" required placeholder="Ingrese su correo electrónico...">
+            </div>
+
+            <div class="form-group">
+                <label for="facultad">Facultad: (Máximo 80 caracteres)</label>
+                <input type="text" id="facultad" name="facultad" maxlength="80" required placeholder="Ingrese su facultad...">
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">Nivel</label>
+                <select id="nivel" name="nivel" required>
+                    <option value="">Seleccione un nivel</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <label for="paralelo">Paralelo</label>
+                <select id="paralelo" name="paralelo" required>
+                    <option value="">Seleccione un paralelo</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+
+            <button type="submit"><b>Guardar</b></button>
+
+        </form>
+        
+    </div>
+    <script src="registroE.js"></script>
+
+</body>
+</html>
